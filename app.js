@@ -4,12 +4,12 @@ const QRPortalWeb = require('@bot-whatsapp/portal')
 const BaileysProvider = require('@bot-whatsapp/provider/baileys')
 const MockAdapter = require('@bot-whatsapp/database/mock')
 
-const flowSecundario = addKeyword(['2', 'siguiente']).addAnswer(['📄 Aquí tenemos el flujo secundario'])
 
 const flowAsesorLlamada = addKeyword(['1']).addAnswer(
     [
         '¡Genial! Un asesor se estara contactando por _*Llamada telefónica*_',
-        'Gracias y saludos.'
+        '',
+        'Gracias por contactarte con Pi Real Estate.'
     ]
 )
 
@@ -62,27 +62,73 @@ const flowAnfitrion = addKeyword(['anfitrion', 'anfitrión', 'anf', 'anfitron', 
     [flowAsesor]
 )
 
-const flowAndro = addKeyword(['andro']).addAnswer(
+const flowAndro = addKeyword(['andro', '2', '2)']).addAnswer(
     [
-        "asfas andro",    
+        'Te mandamos nuestro brochure para que tengas más información acerca de este innovador proyecto para solterxs en Mendoza, Argentina llamado _*Andro*_.',
+        '',
+        '-Link: https://pireal.com.ar/anfitrionlp/wp-content/uploads/2024/02/Andro-Brochure-2024.pdf',
+        '',
+        'Si tenés más dudas escribí la palabra *asesor*.'   
     ],
-)
-    .addAnswer(
-    [
-
-    ],
-    
     null,
     null,
-    [flowSecundario]
-
+    [flowAsesor]
 )
 
 
 
+const flowVeganians = addKeyword(['1', 'veganians', '1)'])
+.addAnswer(
+    [
+
+        '¡Genial! Un asesor se estará contactando lo antes posible por _*Veganians*_.',
+        '',
+        'Gracias por tu paciencia.'
+    ]
+)
+
+const flowTorreFuerte = addKeyword(['2', 'Torrefuerte', 'torre fuerte', '2)'])
+.addAnswer(
+    [
+        '¡Genial! Un asesor se estará contactando lo antes posible por _*Torre Fuerte*_.',
+        '',
+        'Gracias por tu paciencia.'
+    ]
+)
+
+const flowDistintxs = addKeyword(['3', 'distintxs', '3)'])
+.addAnswer(
+    [
+        'Te mandamos nuestro brochure para que tengas mas información acerca de este innovador proyecto en Barcelona, España.',
+        '',
+        '-Link: https://pireal.com.ar/anfitrionlp/wp-content/uploads/2024/02/Distintxs-brochure.pdf',
+        '',
+        'Si tenés más dudas escribí la palabra *asesor*.'
+    ],
+    null,
+    null,
+    [flowAsesor]
+)
 
 
-const flowPrincipal = addKeyword(['anfitrión'])
+
+const flowOtros = addKeyword(['4', 'otros', '4)'])
+.addAnswer(
+    [
+        'Otros proyectos',
+        '',
+        '*1) Veganians* - Edificio Vegano 🌱 (Barcelona)',
+        '*2) Torre Fuerte* - Vive lo alto 🏟️ - Finalizado (Mendoza)',
+        '',
+        'Para volver escribí la palabra _*volver*_.'
+    ],
+    null,
+    null,
+    [flowTorreFuerte, flowVeganians]
+)
+
+
+const flowPrincipal = addKeyword(['necesito más información sobre Anfitrión'])
     .addAnswer('¡Hola! Me presento: mi nombre es Pilar, trabajo en el área comercial de _*Pi Real Estate*_. ¿Podrias indicarme tu nombre por favor?',
     {capture: true},
     async (ctx, {flowDynamic, state}) => {
@@ -97,17 +143,28 @@ const flowPrincipal = addKeyword(['anfitrión'])
             '',
             'Seleccioná el proyecto por el cual estás interesado:',
             '',
-            '*1) Anfitrión* - Edificio del vino 🍷',
-            '*2) Andro* - Edificio para solteros 🕺',
-            '*3) Distintxs* - Edificio LGBT+ 🏳️‍🌈',
+            '*1) Anfitrión* - Edificio del vino 🍷 (Mendoza)',
+            '*2) Andro* - Edificio para solteros 🕺 (Mendoza)',
+            '*3) Distintxs* - Edificio LGBT+ 🏳️‍🌈 (Barcelona)',
             '*4) Otros proyectos*',            
             
             
         ],
         null,
         null,
-        [flowAnfitrion, flowAndro]
+        [flowAnfitrion, flowAndro, flowOtros, flowDistintxs]
     )
+
+
+const flowAnfitrionAs = addKeyword(['1', 'anfitrion', 'anfitrión', '1)'])
+.addAnswer(
+    [
+        '¡Genial! Un asesor se pondrá en contacto lo antes posible por tu consulta de _*Anfitrión*_',
+        '',
+        'Gracias por comunicarte con Pi Real Estate.'
+    ]
+)
+
 
 const flowPrincipal2 = addKeyword('info')
     .addAnswer(
@@ -125,7 +182,7 @@ const flowPrincipal2 = addKeyword('info')
         ],
         null,
         null,
-        [flowAnfitrion, flowAndro]
+        [flowAnfitrionAs, flowAndro, flowOtros, flowDistintxs]
     )
 
 
