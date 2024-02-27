@@ -34,7 +34,7 @@ const flowAsesor = addKeyword(['asesor']).addAnswer(
     
 )
 
-const flowAnfitrion = addKeyword(['anfitrion', 'anfitrión', 'anf', 'anfitron']).addAnswer(
+const flowAnfitrion = addKeyword(['anfitrion', 'anfitrión', 'anf', 'anfitron', '1']).addAnswer(
     [
         'El _*Edificio Anfitrión*_ es un proyecto inmobiliario *único* y *exclusivo* para alquiler temporario, ubicado en Mendoza - Argentina, Capital Internacional del Vino 🍷. Se encuentra en el corazón de la Quinta Sección, a metros del Parque Gral San Martín.',
     ],
@@ -51,7 +51,7 @@ const flowAnfitrion = addKeyword(['anfitrion', 'anfitrión', 'anf', 'anfitron'])
         '',
         '-Link de nuestro *video institucional*: https://pireal.com.ar/anfitrionlp/wp-content/uploads/2024/02/Video-Institucional-Pi-Real-Estate_H.mp4',
         '',
-        'Link del *Brochure*: https://pireal.com.ar/anfitrionlp/wp-content/uploads/2024/02/Anfitrion-Brochure-corto-2024.pdf',
+        '-Link del *Brochure*: https://pireal.com.ar/anfitrionlp/wp-content/uploads/2024/02/Anfitrion-Brochure-corto-2024.pdf',
 
         '',
         'Si tiene dudas puede hablar directamente con un asesor de ventas escribiendo la palabra *asesor*.'
@@ -100,8 +100,7 @@ const flowPrincipal = addKeyword(['anfitrión'])
             '*1) Anfitrión* - Edificio del vino 🍷',
             '*2) Andro* - Edificio para solteros 🕺',
             '*3) Distintxs* - Edificio LGBT+ 🏳️‍🌈',
-            '*4) Otros proyectos*',
-            
+            '*4) Otros proyectos*',            
             
             
         ],
@@ -110,9 +109,29 @@ const flowPrincipal = addKeyword(['anfitrión'])
         [flowAnfitrion, flowAndro]
     )
 
+const flowPrincipal2 = addKeyword('info')
+    .addAnswer(
+        [
+            'Contamos con una variedad de proyectos disruptivos y únicos tanto en _Mendoza, Argentina_ como en _Barcelona, España_.',
+            '',
+            'Seleccioná el proyecto por el cual estás interesado:',
+            '',
+            '*1) Anfitrión* - Edificio del vino 🍷',
+            '*2) Andro* - Edificio para solteros 🕺',
+            '*3) Distintxs* - Edificio LGBT+ 🏳️‍🌈',
+            '*4) Otros proyectos*',            
+            
+            
+        ],
+        null,
+        null,
+        [flowAnfitrion, flowAndro]
+    )
+
+
 const main = async () => {
     const adapterDB = new MockAdapter()
-    const adapterFlow = createFlow([flowPrincipal])
+    const adapterFlow = createFlow([flowPrincipal, flowPrincipal2])
     const adapterProvider = createProvider(BaileysProvider)
 
     createBot({
