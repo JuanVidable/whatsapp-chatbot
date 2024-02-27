@@ -2,26 +2,160 @@
   key: {
     remoteJid: '5492617064315@s.whatsapp.net',
     fromMe: false,
-    id: '17726F9D8A8C7ED24DC11465026EE6B2',
+    id: '9E82AEA68F62117CA7F0FF14F88F9FF9',
     participant: undefined
   },
-  messageTimestamp: 1709049314,
+  messageTimestamp: 1709050691,
   pushName: 'Pi Real Estate',
   broadcast: false,
   message: Message {
-    conversation: 'Hola, necesito más información sobre Anfitrión.',
+    conversation: 'Info',
     messageContextInfo: MessageContextInfo {
       deviceListMetadata: [DeviceListMetadata],
       deviceListMetadataVersion: 2
     }
   },
   verifiedBizName: 'Pi Real Estate',
-  body: 'Hola, necesito más información sobre Anfitrión.',
+  body: 'Info',
   from: '5492617064315'
 }
 [QUEUE_SE_ENVIO]:  {
-  ref: 'ans_0b07a2f3-8cd4-445c-aa2a-9766acade72b',
-  keyword: 'key_3e84f8ae-e78f-4a71-bc1c-ed9b57c2b357',
+  ref: 'ans_39fbb570-ebc4-4234-8bdf-4337ac5041bc',
+  keyword: 'key_a202b7ad-0fa7-44b9-82d6-d11205b0528f',
+  answer: 'Contamos con una variedad de proyectos disruptivos y únicos tanto en _Mendoza, Argentina_ como en _Barcelona, España_.\n' +
+    '\n' +
+    'Seleccioná el proyecto por el cual estás interesado:\n' +
+    '\n' +
+    '*1) Anfitrión* - Edificio del vino 🍷\n' +
+    '*2) Andro* - Edificio para solteros 🕺\n' +
+    '*3) Distintxs* - Edificio LGBT+ 🏳️‍🌈\n' +
+    '*4) Otros proyectos*',
+  options: {
+    media: null,
+    buttons: [],
+    capture: false,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object]
+    ],
+    keyword: {},
+    callback: false
+  },
+  refSerialize: '98a3b745eb07b2d288bc8de055103ea5'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '5492617064315@s.whatsapp.net',
+    fromMe: false,
+    id: '37D792DDE09B7EA1A3C02689E95141F1',
+    participant: undefined
+  },
+  messageTimestamp: 1709050694,
+  pushName: 'Pi Real Estate',
+  broadcast: false,
+  message: Message {
+    conversation: '1',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  verifiedBizName: 'Pi Real Estate',
+  body: '1',
+  from: '5492617064315'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_e9b545c4-a77f-4451-8fbd-15baf83a736a',
+  keyword: 'key_103587a4-3a97-4ef6-a864-b2d334d8ba01',
+  answer: '¿Como prefiere que lo contactemos? (Escriba un número)\n' +
+    ' \n' +
+    '*1*) Llamada telefónica\n' +
+    '*2*) WhatsApp',
+  options: {
+    media: null,
+    buttons: [],
+    capture: false,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [ [Object], [Object], [Object], [Object] ],
+    keyword: {},
+    callback: false
+  },
+  refSerialize: 'ad80bbedba49fc317f17a7007d0546bc'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '5492617064315@s.whatsapp.net',
+    fromMe: false,
+    id: '77C8AC460FE907A15C8C10F61D24AC3B',
+    participant: undefined
+  },
+  messageTimestamp: 1709050697,
+  pushName: 'Pi Real Estate',
+  broadcast: false,
+  message: Message {
+    conversation: '1',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  verifiedBizName: 'Pi Real Estate',
+  body: '1',
+  from: '5492617064315'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_6a81f860-2678-4272-8e17-9dfc4a646870',
+  keyword: 'key_1e393288-a7b1-46ff-9cc8-51d292d65d14',
+  answer: '¡Genial! Un asesor se estara contactando por _*Llamada telefónica*_\n' +
+    '\n' +
+    'Gracias por contactarte con Pi Real Estate.',
+  options: {
+    media: null,
+    buttons: [],
+    capture: false,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: false
+  },
+  refSerialize: 'cfa92875953d57ebad8457973797d1d1'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '5492617064315@s.whatsapp.net',
+    fromMe: false,
+    id: '86AD3960E1D906D38DAB0EEC5A91AC7D',
+    participant: undefined
+  },
+  messageTimestamp: 1709050734,
+  pushName: 'Pi Real Estate',
+  broadcast: false,
+  message: Message {
+    conversation: 'Hola, necesito más información sobre Anfitrión',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  verifiedBizName: 'Pi Real Estate',
+  body: 'Hola, necesito más información sobre Anfitrión',
+  from: '5492617064315'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_5d2a387a-e6d7-4505-99a9-e0d0d5c4a3fd',
+  keyword: 'key_327ae89c-3eec-4f26-af8a-c1239a2b6818',
   answer: '¡Hola! Me presento: mi nombre es Pilar, trabajo en el área comercial de _*Pi Real Estate*_. ¿Podrias indicarme tu nombre por favor?',
   options: {
     media: null,
@@ -35,32 +169,32 @@
     keyword: {},
     callback: true
   },
-  refSerialize: 'fb0863846ee34a4a0e3ec361417fc41d'
+  refSerialize: '8365c008004b5b0761b7fabd736fe8ee'
 }
 [handleMsg]:  {
   key: {
     remoteJid: '5492617064315@s.whatsapp.net',
     fromMe: false,
-    id: 'C4043FE225C44A6A1A95C5582CD90F94',
+    id: 'F733039ADB475654DEA3D89D282A1B7C',
     participant: undefined
   },
-  messageTimestamp: 1709049320,
+  messageTimestamp: 1709050739,
   pushName: 'Pi Real Estate',
   broadcast: false,
   message: Message {
-    conversation: 'Pepe',
+    conversation: 'Pico',
     messageContextInfo: MessageContextInfo {
       deviceListMetadata: [DeviceListMetadata],
       deviceListMetadataVersion: 2
     }
   },
   verifiedBizName: 'Pi Real Estate',
-  body: 'Pepe',
+  body: 'Pico',
   from: '5492617064315'
 }
 [QUEUE_SE_ENVIO]:  {
-  ref: 'ans_88d4d7c2-d624-4413-a93d-7552c34bd82d',
-  keyword: 'ans_0b07a2f3-8cd4-445c-aa2a-9766acade72b',
+  ref: 'ans_6adbee95-b178-401a-b0a2-de4a03f78bcf',
+  keyword: 'ans_5d2a387a-e6d7-4505-99a9-e0d0d5c4a3fd',
   answer: 'Contamos con una variedad de proyectos disruptivos y únicos tanto en _Mendoza, Argentina_ como en _Barcelona, España_.\n' +
     '\n' +
     'Seleccioná el proyecto por el cual estás interesado:\n' +
@@ -88,93 +222,37 @@
     keyword: {},
     callback: false
   },
-  refSerialize: 'e9f9b535c52b6c956215d23021ec8059'
+  refSerialize: 'ba6cc18fbcb5ecee17cfbfa37acefe12'
 }
 [handleMsg]:  {
   key: {
     remoteJid: '5492617064315@s.whatsapp.net',
     fromMe: false,
-    id: '8489EE10B3FF6E10A593DB71A673A5E6',
+    id: 'FB31454D96129BA0BE99B275C94FA9A6',
     participant: undefined
   },
-  messageTimestamp: 1709049335,
+  messageTimestamp: 1709050769,
   pushName: 'Pi Real Estate',
   broadcast: false,
   message: Message {
-    conversation: 'Anfitrión',
+    conversation: '2',
     messageContextInfo: MessageContextInfo {
       deviceListMetadata: [DeviceListMetadata],
       deviceListMetadataVersion: 2
     }
   },
   verifiedBizName: 'Pi Real Estate',
-  body: 'Anfitrión',
+  body: '2',
   from: '5492617064315'
 }
 [QUEUE_SE_ENVIO]:  {
-  ref: 'ans_8570ee74-ba5b-4eb1-929b-af77a657a2f8',
-  keyword: 'key_bbfb7c20-4409-4ad8-88c1-bf00fd2255ef',
-  answer: 'El _*Edificio Anfitrión*_ es un proyecto inmobiliario *único* y *exclusivo* para alquiler temporario, ubicado en Mendoza - Argentina, Capital Internacional del Vino 🍷. Se encuentra en el corazón de la Quinta Sección, a metros del Parque Gral San Martín.',
-  options: {
-    media: null,
-    buttons: [],
-    capture: false,
-    child: null,
-    delay: 0,
-    idle: null,
-    ref: null,
-    nested: [],
-    keyword: {},
-    callback: false
-  },
-  refSerialize: '7370665d33753377ae30c793d06a5c82'
-}
-[QUEUE_SE_ENVIO]:  {
-  ref: 'ans_fb20690a-f8b7-4bc4-9bfd-f3e863398c01',
-  keyword: 'ans_8570ee74-ba5b-4eb1-929b-af77a657a2f8',
-  answer: '*Anfitrión* es un edificio cuyos departamentos podrán ser alquilados bajo la modalidad de *alquiler temporario* (ideal a través de Airbnb), lo que asegura una *rentabilidad en dólares*; por ejemplo, cada departamento puede ser dividido en 2 unidades independientes sin necesidad de ningún tipo de construcción adicional, lo que le brinda al inversor la posibilidad de maximizar la rentabilidad del alquiler 💰. La rentabilidad estimada por alquiler temporario es del *14,9%* - contra un *4,1%* que ofrece un alquiler tradicional -  y la rentabilidad patrimonial estimada es del *49%*.',
-  options: {
-    media: null,
-    buttons: [],
-    capture: false,
-    child: null,
-    delay: 0,
-    idle: null,
-    ref: null,
-    nested: [],
-    keyword: {},
-    callback: false
-  },
-  refSerialize: 'de79f52d2b1929ab4955de2ef87e223a'
-}
-[QUEUE_SE_ENVIO]:  {
-  ref: 'ans_4e149d6b-7c68-4bdb-af1d-0d3af494dd26',
-  keyword: 'ans_fb20690a-f8b7-4bc4-9bfd-f3e863398c01',
-  answer: 'Además *Anfitrión* contará con una innovadora cañería de vino en cada departamento, lo que lo convierte en el primer edificio en el mundo con este sistema. Contará también con un *viñedo en terraza*, *cavas de vino subterráneas*, *SUM* y *exclusivo rooftop*, y *galería de objetos*.',
-  options: {
-    media: null,
-    buttons: [],
-    capture: false,
-    child: null,
-    delay: 0,
-    idle: null,
-    ref: null,
-    nested: [],
-    keyword: {},
-    callback: false
-  },
-  refSerialize: 'be60167b3a029ce0c196cee4fb10b5b7'
-}
-[QUEUE_SE_ENVIO]:  {
-  ref: 'ans_eaa9adbb-5762-49e5-991c-7e9258c3046f',
-  keyword: 'ans_4e149d6b-7c68-4bdb-af1d-0d3af494dd26',
-  answer: 'A continuación, te envío un archivo con información de la empresa y otro archivo con información de relevancia del proyecto. Quedo a total disposición por cualquier inquietud o consulta que tengas.\n' +
+  ref: 'ans_65f09744-1fac-4325-ba9e-16d5e2e3e8c0',
+  keyword: 'key_428aa56d-0f8a-4e25-ad36-d51317d3d426',
+  answer: 'Te mandamos nuestro brochure para que tengas más información acerca de este innovador proyecto para solterxs en Mendoza, Argentina llamado _*Andro*_.\n' +
     '\n' +
-    '-Link de nuestro *video institucional*: https://pireal.com.ar/anfitrionlp/wp-content/uploads/2024/02/Video-Institucional-Pi-Real-Estate_H.mp4\n' +
+    '-Link: https://pireal.com.ar/anfitrionlp/wp-content/uploads/2024/02/Andro-Brochure-2024.pdf\n' +
     '\n' +
-    '-Link del *Brochure*: https://pireal.com.ar/anfitrionlp/wp-content/uploads/2024/02/Anfitrion-Brochure-corto-2024.pdf\n' +
-    '\n' +
-    'Si tiene dudas puede hablar directamente con un asesor de ventas escribiendo la palabra *asesor*.',
+    'Si tenés más dudas escribí la palabra *asesor*.',
   options: {
     media: null,
     buttons: [],
@@ -187,16 +265,16 @@
     keyword: {},
     callback: false
   },
-  refSerialize: '84f9480ef8a38b36e196599a3ba182f4'
+  refSerialize: 'f22f8a712f53e7ce2f569b1616ac927a'
 }
 [handleMsg]:  {
   key: {
     remoteJid: '5492617064315@s.whatsapp.net',
     fromMe: false,
-    id: '8AF01EF7BED7832BB95A6FE08F95F408',
+    id: '28A8751F3F5B824A5BA7F9A7BE83BEB1',
     participant: undefined
   },
-  messageTimestamp: 1709049402,
+  messageTimestamp: 1709050778,
   pushName: 'Pi Real Estate',
   broadcast: false,
   message: Message {
@@ -211,8 +289,8 @@
   from: '5492617064315'
 }
 [QUEUE_SE_ENVIO]:  {
-  ref: 'ans_8c62030c-0ed8-47b6-9cc3-dd4b5ea81f07',
-  keyword: 'key_e1d566e4-534c-46ed-bd7b-64f9d4b61dfb',
+  ref: 'ans_03f2bb26-3c80-4b62-adc5-92c63a906ad3',
+  keyword: 'key_39a79389-a99e-4194-954f-1021de1a7b02',
   answer: '¿Como prefiere que lo contactemos? (Escriba un número)\n' +
     ' \n' +
     '*1*) Llamada telefónica\n' +
@@ -229,34 +307,35 @@
     keyword: {},
     callback: false
   },
-  refSerialize: '41f6760899701b76967efa49a04af37c'
+  refSerialize: '00e9ab4ba0ba17115cc674f19363e4ba'
 }
 [handleMsg]:  {
   key: {
     remoteJid: '5492617064315@s.whatsapp.net',
     fromMe: false,
-    id: 'DBA46C50162F9502067EE22D7D3A77AF',
+    id: 'BD8FBA46BACF2AC1ADAC058A296869CD',
     participant: undefined
   },
-  messageTimestamp: 1709049406,
+  messageTimestamp: 1709050806,
   pushName: 'Pi Real Estate',
   broadcast: false,
   message: Message {
-    conversation: '1',
+    conversation: '2',
     messageContextInfo: MessageContextInfo {
       deviceListMetadata: [DeviceListMetadata],
       deviceListMetadataVersion: 2
     }
   },
   verifiedBizName: 'Pi Real Estate',
-  body: '1',
+  body: '2',
   from: '5492617064315'
 }
 [QUEUE_SE_ENVIO]:  {
-  ref: 'ans_18521842-51c1-4deb-9197-bbb7ea3d87dd',
-  keyword: 'key_0337658e-bb4c-4268-a0a8-55e4aff5180a',
-  answer: '¡Genial! Un asesor se estara contactando por _*Llamada telefónica*_\n' +
-    'Gracias y saludos.',
+  ref: 'ans_c1e6ac70-6cfb-44fe-adbe-e6d85471f731',
+  keyword: 'key_f0b5964a-4f2b-4515-a1bf-de4f9a7fe267',
+  answer: '¡Genial! Un asesor se estara contactando por _*WhatsApp*_\n' +
+    '\n' +
+    'Gracias por contactarte con Pi Real Estate.',
   options: {
     media: null,
     buttons: [],
@@ -269,5 +348,5 @@
     keyword: {},
     callback: false
   },
-  refSerialize: 'f885a4f65edf270a472d6280b734b434'
+  refSerialize: '16bfdab229c8de9f49b559faf14de381'
 }

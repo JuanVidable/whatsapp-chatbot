@@ -62,7 +62,7 @@ const flowAnfitrion = addKeyword(['anfitrion', 'anfitrión', 'anf', 'anfitron', 
     [flowAsesor]
 )
 
-const flowAndro = addKeyword(['andro', '2', '2)']).addAnswer(
+const flowAndro = addKeyword(['andro', '2']).addAnswer(
     [
         'Te mandamos nuestro brochure para que tengas más información acerca de este innovador proyecto para solterxs en Mendoza, Argentina llamado _*Andro*_.',
         '',
@@ -77,7 +77,7 @@ const flowAndro = addKeyword(['andro', '2', '2)']).addAnswer(
 
 
 
-const flowVeganians = addKeyword(['1', 'veganians', '1)'])
+const flowVeganians = addKeyword(['1', 'veganians'])
 .addAnswer(
     [
 
@@ -87,7 +87,7 @@ const flowVeganians = addKeyword(['1', 'veganians', '1)'])
     ]
 )
 
-const flowTorreFuerte = addKeyword(['2', 'Torrefuerte', 'torre fuerte', '2)'])
+const flowTorreFuerte = addKeyword(['2', 'Torrefuerte', 'torre fuerte'])
 .addAnswer(
     [
         '¡Genial! Un asesor se estará contactando lo antes posible por _*Torre Fuerte*_.',
@@ -96,7 +96,7 @@ const flowTorreFuerte = addKeyword(['2', 'Torrefuerte', 'torre fuerte', '2)'])
     ]
 )
 
-const flowDistintxs = addKeyword(['3', 'distintxs', '3)'])
+const flowDistintxs = addKeyword(['3', 'distintxs'])
 .addAnswer(
     [
         'Te mandamos nuestro brochure para que tengas mas información acerca de este innovador proyecto en Barcelona, España.',
@@ -112,15 +112,13 @@ const flowDistintxs = addKeyword(['3', 'distintxs', '3)'])
 
 
 
-const flowOtros = addKeyword(['4', 'otros', '4)'])
+const flowOtros = addKeyword(['4', 'otros'])
 .addAnswer(
     [
         'Otros proyectos',
         '',
         '*1) Veganians* - Edificio Vegano 🌱 (Barcelona)',
         '*2) Torre Fuerte* - Vive lo alto 🏟️ - Finalizado (Mendoza)',
-        '',
-        'Para volver escribí la palabra _*volver*_.'
     ],
     null,
     null,
@@ -156,13 +154,17 @@ const flowPrincipal = addKeyword(['necesito más información sobre Anfitrión']
     )
 
 
-const flowAnfitrionAs = addKeyword(['1', 'anfitrion', 'anfitrión', '1)'])
+const flowAnfitrionAs = addKeyword(['1', 'anfitrion', 'anfitrión'])
 .addAnswer(
     [
-        '¡Genial! Un asesor se pondrá en contacto lo antes posible por tu consulta de _*Anfitrión*_',
-        '',
-        'Gracias por comunicarte con Pi Real Estate.'
-    ]
+        '¿Como prefiere que lo contactemos? (Escriba un número)',
+        ' ',
+        '*1*) Llamada telefónica',
+        '*2*) WhatsApp',
+    ],
+    null,
+    null,
+    [flowAsesorLlamada, flowAsesorWpp]
 )
 
 
