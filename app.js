@@ -1,6 +1,5 @@
 const { createBot, createProvider, createFlow, addKeyword } = require('@bot-whatsapp/bot')
 
-const QRPortalWeb = require('@bot-whatsapp/portal')
 const BaileysProvider = require('@bot-whatsapp/provider/baileys')
 const MockAdapter = require('@bot-whatsapp/database/mock')
 
@@ -126,7 +125,7 @@ const flowOtros = addKeyword(['4', 'otros'])
 )
 
 
-const flowPrincipal = addKeyword(['necesito más información sobre Anfitrión', '¡Hola! Quiero más información.'])
+const flowPrincipal = addKeyword(['necesito más información sobre Anfitrión', '¡Hola! Quiero más información.', 'hola'])
     .addAnswer('¡Hola! Me presento: mi nombre es Pilar, trabajo en el área comercial de _*Pi Real Estate*_. ¿Podrias indicarme tu nombre por favor?',
     {capture: true},
     async (ctx, {flowDynamic, state}) => {
@@ -200,7 +199,7 @@ const main = async () => {
         database: adapterDB,
     })
 
-    QRPortalWeb()
+    
 }
 
 main()
