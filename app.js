@@ -1,4 +1,4 @@
-const { createBot, createProvider, createFlow, addKeyword } = require('@bot-whatsapp/bot')
+const { createBot, createProvider, createFlow, addKeyword, EVENTS } = require('@bot-whatsapp/bot')
 
 const BaileysProvider = require('@bot-whatsapp/provider/baileys')
 const MockAdapter = require('@bot-whatsapp/database/mock')
@@ -125,7 +125,7 @@ const flowOtros = addKeyword(['4', 'otros'])
 )
 
 
-const flowPrincipal = addKeyword(['necesito más información sobre Anfitrión', '¡Hola! Quiero más información.', 'hola'])
+const flowPrincipal = addKeyword(EVENTS.WELCOME)
     .addAnswer('¡Hola! Me presento: mi nombre es Pilar, trabajo en el área comercial de _*Pi Real Estate*_. ¿Podrias indicarme tu nombre por favor?',
     {capture: true},
     async (ctx, {flowDynamic, state}) => {
@@ -153,44 +153,10 @@ const flowPrincipal = addKeyword(['necesito más información sobre Anfitrión',
     )
 
 
-const flowAnfitrionAs = addKeyword(['1', 'anfitrion', 'anfitrión'])
-.addAnswer(
-    [
-        '¿Como prefiere que lo contactemos? (Escriba un número)',
-        ' ',
-        '*1*) Llamada telefónica',
-        '*2*) WhatsApp',
-    ],
-    null,
-    null,
-    [flowAsesorLlamada, flowAsesorWpp]
-)
-
-
-
-const flowPrincipal2 = addKeyword('info')
-    .addAnswer(
-        [
-            'Contamos con una variedad de proyectos disruptivos y únicos tanto en _Mendoza, Argentina_ como en _Barcelona, España_.',
-            '',
-            'Seleccioná el proyecto por el cual estás interesado:',
-            '',
-            '*1) Anfitrión* - Edificio del vino 🍷',
-            '*2) Andro* - Edificio para solteros 🕺',
-            '*3) Distintxs* - Edificio LGBT+ 🏳️‍🌈',
-            '*4) Otros proyectos*',            
-            
-            
-        ],
-        null,
-        null,
-        [flowAnfitrionAs, flowAndro, flowOtros, flowDistintxs]
-    )
-
 
 const main = async () => {
     const adapterDB = new MockAdapter()
-    const adapterFlow = createFlow([flowPrincipal, flowPrincipal2])
+    const adapterFlow = createFlow([flowPrincipal])
     const adapterProvider = createProvider(BaileysProvider)
 
     createBot({
