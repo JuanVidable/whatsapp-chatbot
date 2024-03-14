@@ -53,12 +53,9 @@ const flowAnfitrion = addKeyword(['anfitrion', 'anfitrión', 'anf', 'anfitron', 
         '-Link del *Brochure*: https://pireal.com.ar/anfitrionlp/wp-content/uploads/2024/02/Anfitrion-Brochure-corto-2024.pdf',
 
         '',
-        'Si tiene dudas puede hablar directamente con un asesor de ventas escribiendo la palabra *asesor*.'
+        'Un *asesor comercial* te contactará lo *antes posible* para darte más detalles sobre esta increíble oportunidad de inversión. Gracias por contactarte con *Pi Real Estate*'
     ],
     
-    null,
-    null,
-    [flowAsesor]
 )
 
 const flowAndro = addKeyword(['andro', '2']).addAnswer(
@@ -119,13 +116,23 @@ const flowOtros = addKeyword(['4', 'otros'])
         '*1) Veganians* - Edificio Vegano 🌱 (Barcelona)',
         '*2) Torre Fuerte* - Vive lo alto 🏟️ - Finalizado (Mendoza)',
     ],
-    null,
-    null,
-    [flowTorreFuerte, flowVeganians]
+    {capture:true},
+    async (ctx, {gotoFlow, fallBack}) =>{
+        let opcion = ctx.body
+        if(!['1', '2'].includes(opcion)){
+            return fallBack("Disculpá, no he detectado una respuesta válida, por favor intentá nuevamente")
+        }else{
+            if(opcion=='1'){
+                return gotoFlow(flowVeganians)
+            }else{
+                return gotoFlow(flowTorreFuerte)
+            }
+        }
+    }
 )
 
 
-const flowPrincipal = addKeyword(EVENTS.WELCOME)
+const flowPrincipal = addKeyword(['hola', 'información', 'informacion', 'buenas'])
     .addAnswer('¡Hola! Me presento: mi nombre es Pilar, trabajo en el área comercial de _*Pi Real Estate*_. ¿Podrias indicarme tu nombre por favor?',
     {capture: true},
     async (ctx, {flowDynamic, state}) => {
@@ -147,10 +154,26 @@ const flowPrincipal = addKeyword(EVENTS.WELCOME)
             
             
         ],
-        null,
-        null,
-        [flowAnfitrion, flowAndro, flowOtros, flowDistintxs]
-    )
+        {capture:true},
+        async (ctx, {gotoFlow, fallBack}) => {
+            let opcion = ctx.body
+            if(!['1', '2', '3', '4'].includes(opcion)){
+                return fallBack("Disculpá, no he detectado una respuesta válida, por favor intentá nuevamente")
+            }else{
+                switch(opcion){
+                    case '1':
+                        return gotoFlow(flowAnfitrion)
+                    case '2':
+                        return gotoFlow(flowAndro)
+                    case '3':
+                        return gotoFlow(flowDistintxs)
+                    case '4':
+                        return gotoFlow(flowOtros)
+                }
+            }
+        }
+
+)
 
 
 
