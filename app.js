@@ -132,7 +132,7 @@ const flowOtros = addKeyword(['4', 'otros'])
 )
 
 
-const flowPrincipal = addKeyword(['hola', 'información', 'informacion', 'buenas'])
+const flowPrincipal = addKeyword(['¡Hola! Quiero más información.'])
     .addAnswer('¡Hola! Me presento: mi nombre es Pilar, trabajo en el área comercial de _*Pi Real Estate*_. ¿Podrias indicarme tu nombre por favor?',
     {capture: true},
     async (ctx, {flowDynamic, state}) => {
