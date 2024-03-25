@@ -33,7 +33,7 @@ const flowAsesor = addKeyword(['asesor']).addAnswer(
     
 )
 
-const flowAnfitrion = addKeyword(['anfitrion', 'anfitrión', 'anf', 'anfitron', '1']).addAnswer(
+const flowAnfitrion = addKeyword(['anfitrion', 'anfitrión', 'anf', 'anfitron', '1', '1)']).addAnswer(
     [
         'El _*Edificio Anfitrión*_ es un proyecto inmobiliario *único* y *exclusivo* para alquiler temporario, ubicado en Mendoza - Argentina, Capital Internacional del Vino 🍷. Se encuentra en el corazón de la Quinta Sección, a metros del Parque Gral San Martín.',
     ],
@@ -138,7 +138,7 @@ const flowPrincipal = addKeyword(['¡Hola! Quiero más información.'])
     async (ctx, {flowDynamic, state}) => {
         await state.update({name: ctx.body})
     
-        await flowDynamic(`¡Gracias por tu nombre ${ctx.body}!`)
+        await flowDynamic(`¡Gracias por tu nombre!`)
     }
     )
     .addAnswer(
@@ -157,13 +157,23 @@ const flowPrincipal = addKeyword(['¡Hola! Quiero más información.'])
         {capture:true},
         async (ctx, {gotoFlow, fallBack}) => {
             let opcion = ctx.body
-            if(!['1', '2', '3', '4'].includes(opcion)){
+            if(!['1','1)','anfitrion','anfitrión', '2','2)','andro', '3', '4'].includes(opcion)){
                 return fallBack("Disculpá, no he detectado una respuesta válida, por favor intentá nuevamente")
             }else{
                 switch(opcion){
                     case '1':
                         return gotoFlow(flowAnfitrion)
+                    case '1)':
+                        return gotoFlow(flowAnfitrion)
+                    case 'anfitrion':
+                        return gotoFlow(flowAnfitrion)
+                    case 'anfitrión':
+                        return gotoFlow(flowAnfitrion)
                     case '2':
+                        return gotoFlow(flowAndro)
+                    case '2)':
+                        return gotoFlow(flowAndro)
+                    case 'andro':
                         return gotoFlow(flowAndro)
                     case '3':
                         return gotoFlow(flowDistintxs)
