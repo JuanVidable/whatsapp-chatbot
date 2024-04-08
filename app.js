@@ -39,6 +39,35 @@ const flowDespedida = addKeyword('gracias').addAnswer(
     ]
 )
 
+const flowAndro = addKeyword(['andro', '2']).addAnswer(
+    [
+        'Te mandamos nuestro brochure para que tengas más información acerca de este innovador proyecto para solterxs en Mendoza, Argentina llamado _*Andro*_.',
+        '',
+        '-Link: https://pireal.com.ar/anfitrionlp/wp-content/uploads/2024/02/Andro-Brochure-2024.pdf',
+        '',
+        'Si tenés más dudas escribí la palabra *asesor*.'   
+    ],
+    null,
+    null,
+    [flowAsesor]
+)
+
+const flowDistintxs = addKeyword(['3', 'distintxs'])
+.addAnswer(
+    [
+        'Te mandamos nuestro brochure para que tengas mas información acerca de este innovador proyecto en Barcelona, España.',
+        '',
+        '-Link: https://pireal.com.ar/anfitrionlp/wp-content/uploads/2024/02/Distintxs-brochure.pdf',
+        '',
+        'Un asesor se estará contactando lo antes posible por _*Distintxs*_.',
+        '',
+        'Gracias por tu paciencia.'
+    ],
+    null,
+    null,
+    [flowAsesor]
+)
+
 const flowAnfitrion = addKeyword(['anfitrion', 'anfitrión', 'anf', 'anfitron', '1', '1)']).addAnswer(
     [
         'El _*Edificio Anfitrión*_ es un proyecto inmobiliario *único* y *exclusivo* para alquiler temporario, ubicado en Mendoza - Argentina, Capital Internacional del Vino 🍷. Se encuentra en el corazón de la Quinta Sección, a metros del Parque Gral San Martín.',
@@ -67,18 +96,6 @@ const flowAnfitrion = addKeyword(['anfitrion', 'anfitrión', 'anf', 'anfitron', 
     
 )
 
-const flowAndro = addKeyword(['andro', '2']).addAnswer(
-    [
-        'Te mandamos nuestro brochure para que tengas más información acerca de este innovador proyecto para solterxs en Mendoza, Argentina llamado _*Andro*_.',
-        '',
-        '-Link: https://pireal.com.ar/anfitrionlp/wp-content/uploads/2024/02/Andro-Brochure-2024.pdf',
-        '',
-        'Si tenés más dudas escribí la palabra *asesor*.'   
-    ],
-    null,
-    null,
-    [flowAsesor]
-)
 
 
 
@@ -101,21 +118,7 @@ const flowTorreFuerte = addKeyword(['2', 'Torrefuerte', 'torre fuerte'])
     ]
 )
 
-const flowDistintxs = addKeyword(['3', 'distintxs'])
-.addAnswer(
-    [
-        'Te mandamos nuestro brochure para que tengas mas información acerca de este innovador proyecto en Barcelona, España.',
-        '',
-        '-Link: https://pireal.com.ar/anfitrionlp/wp-content/uploads/2024/02/Distintxs-brochure.pdf',
-        '',
-        'Un asesor se estará contactando lo antes posible por _*Distintxs*_.',
-        '',
-        'Gracias por tu paciencia.'
-    ],
-    null,
-    null,
-    [flowAsesor]
-)
+
 
 
 
