@@ -33,6 +33,12 @@ const flowAsesor = addKeyword(['asesor']).addAnswer(
     
 )
 
+const flowDespedida = addKeyword('gracias').addAnswer(
+    [
+        '¡De nada! Que tengas un buen día.'
+    ]
+)
+
 const flowAnfitrion = addKeyword(['anfitrion', 'anfitrión', 'anf', 'anfitron', '1', '1)']).addAnswer(
     [
         'El _*Edificio Anfitrión*_ es un proyecto inmobiliario *único* y *exclusivo* para alquiler temporario, ubicado en Mendoza - Argentina, Capital Internacional del Vino 🍷. Se encuentra en el corazón de la Quinta Sección, a metros del Parque Gral San Martín.',
@@ -55,6 +61,9 @@ const flowAnfitrion = addKeyword(['anfitrion', 'anfitrión', 'anf', 'anfitron', 
         '',
         'Un *asesor comercial* te contactará lo *antes posible* para darte más detalles sobre esta increíble oportunidad de inversión. Gracias por contactarte con *Pi Real Estate*'
     ],
+    null,
+    null,
+    [flowAndro, flowDistintxs]
     
 )
 
@@ -99,7 +108,9 @@ const flowDistintxs = addKeyword(['3', 'distintxs'])
         '',
         '-Link: https://pireal.com.ar/anfitrionlp/wp-content/uploads/2024/02/Distintxs-brochure.pdf',
         '',
-        'Si tenés más dudas escribí la palabra *asesor*.'
+        'Un asesor se estará contactando lo antes posible por _*Distintxs*_.',
+        '',
+        'Gracias por tu paciencia.'
     ],
     null,
     null,
@@ -114,25 +125,30 @@ const flowOtros = addKeyword(['4', 'otros'])
         'Otros proyectos',
         '',
         '*1) Veganians* - Edificio Vegano 🌱 (Barcelona)',
-        '*2) Torre Fuerte* - Vive lo alto 🏟️ - Finalizado (Mendoza)',
+        '*2) Torre Fuerte* - Vive lo alto ☁️ - Finalizado (Mendoza)',
     ],
     {capture:true},
     async (ctx, {gotoFlow, fallBack}) =>{
         let opcion = ctx.body
-        if(!['1', '2'].includes(opcion)){
+        if(!['1', '2', '1)', '2)'].includes(opcion)){
             return fallBack("Disculpá, no he detectado una respuesta válida, por favor intentá nuevamente")
         }else{
-            if(opcion=='1'){
-                return gotoFlow(flowVeganians)
-            }else{
-                return gotoFlow(flowTorreFuerte)
+            switch(opcion){
+                case '1':
+                    return gotoFlow(flowVeganians)
+                case '1)':
+                    return gotoFlow(flowVeganians)
+                case '2':
+                    return gotoFlow(flowTorreFuerte)
+                case '2)':
+                    return gotoFlow(flowTorreFuerte)
             }
         }
     }
 )
 
 
-const flowPrincipal = addKeyword(['¡Hola! Quiero más información.'])
+const flowPrincipal = addKeyword(['¡Hola! Quiero más información.', '¡Hola! Vengo de su Landing Page y quiero más información.'])
     .addAnswer('¡Hola! Me presento: mi nombre es Pilar, trabajo en el área comercial de _*Pi Real Estate*_. ¿Podrias indicarme tu nombre por favor?',
     {capture: true},
     async (ctx, {flowDynamic, state}) => {
