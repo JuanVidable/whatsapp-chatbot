@@ -92,7 +92,7 @@ const flowAnfitrion = addKeyword(['anfitrion', 'anfitrión', 'anf', 'anfitron', 
     ],
     null,
     null,
-    [flowAndro, flowDistintxs]
+    [flowAndro, flowDistintxs, flowDespedida]
     
 )
 
@@ -132,11 +132,11 @@ const flowOtros = addKeyword(['4', 'otros'])
     ],
     {capture:true},
     async (ctx, {gotoFlow, fallBack}) =>{
-        let opcion = ctx.body
-        if(!['1', '2', '1)', '2)'].includes(opcion)){
+        let opcion2 = ctx.body
+        if(!['1', '2', '1)', '2)'].includes(opcion2)){
             return fallBack("Disculpá, no he detectado una respuesta válida, por favor intentá nuevamente")
         }else{
-            switch(opcion){
+            switch(opcion2){
                 case '1':
                     return gotoFlow(flowVeganians)
                 case '1)':
