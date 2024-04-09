@@ -175,30 +175,21 @@ const flowPrincipal = addKeyword(['¡Hola! Quiero más información.', '¡Hola! 
         ],
         {capture:true},
         async (ctx, {gotoFlow, fallBack}) => {
-            let opcion = ctx.body
-            if(!['1','1)','anfitrion','anfitrión', '2','2)','andro', '3', '4'].includes(opcion)){
-                return fallBack("Disculpá, no he detectado una respuesta válida, por favor intentá nuevamente")
-            }else{
-                switch(opcion){
-                    case '1':
-                        return gotoFlow(flowAnfitrion)
-                    case '1)':
-                        return gotoFlow(flowAnfitrion)
-                    case 'anfitrion':
-                        return gotoFlow(flowAnfitrion)
-                    case 'anfitrión':
-                        return gotoFlow(flowAnfitrion)
-                    case '2':
-                        return gotoFlow(flowAndro)
-                    case '2)':
-                        return gotoFlow(flowAndro)
-                    case 'andro':
-                        return gotoFlow(flowAndro)
-                    case '3':
-                        return gotoFlow(flowDistintxs)
-                    case '4':
-                        return gotoFlow(flowOtros)
-                }
+            
+            if(ctx.body>4 || ctx.body <1){
+                return fallBack('Respuesta Inválida')
+            }
+            if(ctx.body==1){
+                return gotoFlow(flowAnfitrion)
+            }
+            else if(ctx.body==2){
+                return gotoFlow(flowAndro)
+            }
+            else if(ctx.body==3){
+                return gotoFlow(flowDistintxs)
+            }
+            else if(ctx.body==4){
+                return gotoFlow(flowOtros)
             }
         }
 
