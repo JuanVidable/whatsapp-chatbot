@@ -150,6 +150,8 @@ const flowOtros = addKeyword(['4', 'otros'])
     }
 )
 
+const flowInmob = addKeyword("Hola, estoy interesado en sumarme a la red comercial de Pi Real Estate.")
+    .addAnswer("¡Hola! ¡Gracias por tu interés en ser parte de la red de comercialización de Pi Real Estate! Estamos encantados de recibir tu mensaje. Por favor, déjanos tu nombre y correo electrónico para que podamos ponernos en contacto lo antes posible. ¡Saludos!")
 
 const flowPrincipal = addKeyword(['¡Hola! Quiero más información.', '¡Hola! Vengo de su Landing Page y quiero más información.'])
     .addAnswer('¡Hola! Me presento: mi nombre es Pilar, trabajo en el área comercial de _*Pi Real Estate*_. ¿Podrias indicarme tu nombre por favor?',
@@ -190,6 +192,8 @@ const flowPrincipal = addKeyword(['¡Hola! Quiero más información.', '¡Hola! 
             }
             else if(ctx.body==4){
                 return gotoFlow(flowOtros)
+            }else{
+                return fallBack('Respuesta Inválida')
             }
         }
 
@@ -197,9 +201,11 @@ const flowPrincipal = addKeyword(['¡Hola! Quiero más información.', '¡Hola! 
 
 
 
+
+
 const main = async () => {
     const adapterDB = new MockAdapter()
-    const adapterFlow = createFlow([flowPrincipal])
+    const adapterFlow = createFlow([flowPrincipal, flowInmob])
     const adapterProvider = createProvider(BaileysProvider)
 
     createBot({
