@@ -119,41 +119,81 @@ const flowTorreFuerte = addKeyword(['2', 'Torrefuerte', 'torre fuerte'])
 )
 
 
+const flowPrincipalCopia = addKeyword("Volver")
+.addAnswer(
+    [
+        'Contamos con una variedad de proyectos disruptivos y únicos tanto en _Mendoza, Argentina_ como en _Barcelona, España_.',
+        '',
+        'Seleccioná el proyecto por el cual estás interesado:',
+        '',
+        '*1) Anfitrión* - Edificio del vino 🍷 (Mendoza)',
+        '*2) Andro* - Edificio para solteros 🕺 (Mendoza)',
+        '*3) Distintxs* - Edificio LGBT+ 🏳️‍🌈 (Barcelona)',
+        '*4) Otros proyectos*',            
+        
+        
+    ],
+    {capture:true},
+    async (ctx, {gotoFlow, fallBack}) => {
+        
+        if(ctx.body>4 || ctx.body <1){
+            return fallBack('Respuesta Inválida')
+        }
+        if(ctx.body==1){
+            return gotoFlow(flowAnfitrion)
+        }
+        else if(ctx.body==2){
+            return gotoFlow(flowAndro)
+        }
+        else if(ctx.body==3){
+            return gotoFlow(flowDistintxs)
+        }
+        else if(ctx.body==4){
+            return gotoFlow(flowOtros)
+        }else{
+            return fallBack('Respuesta Inválida')
+        }
+    }
+
+)
 
 
-
-const flowOtros = addKeyword(['4', 'otros'])
+const flowOtros = addKeyword('Quiero ver otros proyectos')
 .addAnswer(
     [
         'Otros proyectos',
         '',
         '*1) Veganians* - Edificio Vegano 🌱 (Barcelona)',
         '*2) Torre Fuerte* - Vive lo alto ☁️ - Finalizado (Mendoza)',
+        '*3) Volver*'
     ],
     {capture:true},
-    async (ctx, {gotoFlow, fallBack}) =>{
-        let opcion2 = ctx.body
-        if(!['1', '2', '1)', '2)'].includes(opcion2)){
-            return fallBack("Disculpá, no he detectado una respuesta válida, por favor intentá nuevamente")
-        }else{
-            switch(opcion2){
-                case '1':
-                    return gotoFlow(flowVeganians)
-                case '1)':
-                    return gotoFlow(flowVeganians)
-                case '2':
-                    return gotoFlow(flowTorreFuerte)
-                case '2)':
-                    return gotoFlow(flowTorreFuerte)
+    
+        async (ctx, {gotoFlow, fallBack}) => {
+            
+            if(ctx.body==1){
+                
+                return gotoFlow(flowVeganians)
+            }
+            else if(ctx.body==2){
+                return gotoFlow(flowTorreFuerte)
+            }
+            else if(ctx.body==3){
+                return gotoFlow(flowPrincipalCopia)
+            }
+            else{
+                return fallBack('Respuesta Inválida')
             }
         }
-    }
 )
 
 const flowInmob = addKeyword("Hola, estoy interesado en sumarme a la red comercial de Pi Real Estate.")
     .addAnswer("¡Hola! ¡Gracias por tu interés en ser parte de la red de comercialización de Pi Real Estate! Estamos encantados de recibir tu mensaje. Por favor, déjanos tu nombre y correo electrónico para que podamos ponernos en contacto lo antes posible. ¡Saludos!")
 
-const flowPrincipal = addKeyword(['¡Hola! Quiero más información.', '¡Hola! Vengo de su Landing Page y quiero más información.'])
+
+
+
+    const flowPrincipal = addKeyword(['¡Hola! Quiero más información.', '¡Hola! Vengo de su Landing Page y quiero más información.'])
     .addAnswer('¡Hola! Me presento: mi nombre es Pilar, trabajo en el área comercial de _*Pi Real Estate*_. ¿Podrias indicarme tu nombre por favor?',
     {capture: true},
     async (ctx, {flowDynamic, state}) => {
@@ -205,7 +245,7 @@ const flowPrincipal = addKeyword(['¡Hola! Quiero más información.', '¡Hola! 
 
 const main = async () => {
     const adapterDB = new MockAdapter()
-    const adapterFlow = createFlow([flowPrincipal, flowInmob])
+    const adapterFlow = createFlow([flowPrincipal, flowInmob, flowOtros, flowPrincipalCopia])
     const adapterProvider = createProvider(BaileysProvider)
 
     createBot({
