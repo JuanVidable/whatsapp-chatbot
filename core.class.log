@@ -1,26 +1,27 @@
 [handleMsg]:  {
   key: {
-    remoteJid: '5492615586306@s.whatsapp.net',
+    remoteJid: '5492617064315@s.whatsapp.net',
     fromMe: false,
-    id: 'E118CBB123785C21355FA9077083873E',
+    id: '889153861208F548F81181F5649F8F46',
     participant: undefined
   },
-  messageTimestamp: 1710423086,
-  pushName: 'Juan Vidable',
+  messageTimestamp: 1713540435,
+  pushName: 'Pi Real Estate',
   broadcast: false,
   message: Message {
-    conversation: 'buenas quiero más información',
+    conversation: '¡Hola! Quiero más información.',
     messageContextInfo: MessageContextInfo {
       deviceListMetadata: [DeviceListMetadata],
       deviceListMetadataVersion: 2
     }
   },
-  body: 'buenas quiero más información',
-  from: '5492615586306'
+  verifiedBizName: 'Pi Real Estate',
+  body: '¡Hola! Quiero más información.',
+  from: '5492617064315'
 }
 [QUEUE_SE_ENVIO]:  {
-  ref: 'ans_888154f3-d1f4-454c-85a2-744b3b819080',
-  keyword: 'key_09887951-5a59-4c52-8f85-16ec3c3a0b54',
+  ref: 'ans_d0d37d73-a61d-4d90-8c64-77a971d0668d',
+  keyword: 'key_4d286e52-03c6-41da-b706-9a2719186263',
   answer: '¡Hola! Me presento: mi nombre es Pilar, trabajo en el área comercial de _*Pi Real Estate*_. ¿Podrias indicarme tu nombre por favor?',
   options: {
     media: null,
@@ -34,31 +35,32 @@
     keyword: {},
     callback: true
   },
-  refSerialize: '4829def1bff34e2046c1c1c1f1b7dcde'
+  refSerialize: '987d4c8d2be73ab3ebdef80e4ecf4f09'
 }
 [handleMsg]:  {
   key: {
-    remoteJid: '5492615586306@s.whatsapp.net',
+    remoteJid: '5492617064315@s.whatsapp.net',
     fromMe: false,
-    id: 'B859C22CF9A326B09C16D2D8D1F55D00',
+    id: '847C103AFEF3D9B90A057A91BF5F1F56',
     participant: undefined
   },
-  messageTimestamp: 1710423098,
-  pushName: 'Juan Vidable',
+  messageTimestamp: 1713540438,
+  pushName: 'Pi Real Estate',
   broadcast: false,
   message: Message {
-    conversation: 'Juan',
+    conversation: 'P',
     messageContextInfo: MessageContextInfo {
       deviceListMetadata: [DeviceListMetadata],
       deviceListMetadataVersion: 2
     }
   },
-  body: 'Juan',
-  from: '5492615586306'
+  verifiedBizName: 'Pi Real Estate',
+  body: 'P',
+  from: '5492617064315'
 }
 [QUEUE_SE_ENVIO]:  {
-  ref: 'ans_3cc29c78-a3fb-47a4-9bbe-05ec35df4929',
-  keyword: 'ans_888154f3-d1f4-454c-85a2-744b3b819080',
+  ref: 'ans_ac23f2c2-b1f0-4dee-88fe-27bb42f46324',
+  keyword: 'ans_d0d37d73-a61d-4d90-8c64-77a971d0668d',
   answer: 'Contamos con una variedad de proyectos disruptivos y únicos tanto en _Mendoza, Argentina_ como en _Barcelona, España_.\n' +
     '\n' +
     'Seleccioná el proyecto por el cual estás interesado:\n' +
@@ -79,163 +81,53 @@
     keyword: {},
     callback: true
   },
-  refSerialize: '395d2dbbfab3816e8c8dab5037904010'
+  refSerialize: 'e7b24696aaf444dadf2e2d436ecc4ee9'
 }
 [handleMsg]:  {
   key: {
-    remoteJid: '5492615586306@s.whatsapp.net',
+    remoteJid: '5492617064315@s.whatsapp.net',
     fromMe: false,
-    id: '526156633D90FB144B16412B456C1F53',
+    id: 'B4E5D11B83F2C0BD6CCEF3BFAEBADBB8',
     participant: undefined
   },
-  messageTimestamp: 1710423109,
-  pushName: 'Juan Vidable',
+  messageTimestamp: 1713540444,
+  pushName: 'Pi Real Estate',
   broadcast: false,
   message: Message {
-    conversation: 'as',
+    conversation: '3',
     messageContextInfo: MessageContextInfo {
       deviceListMetadata: [DeviceListMetadata],
       deviceListMetadataVersion: 2
     }
   },
-  body: 'as',
-  from: '5492615586306'
+  verifiedBizName: 'Pi Real Estate',
+  body: '3',
+  from: '5492617064315'
 }
 [handleMsg]:  {
   key: {
-    remoteJid: '5492615586306@s.whatsapp.net',
+    remoteJid: '5492617064315@s.whatsapp.net',
     fromMe: false,
-    id: 'AD7C6727D2B36AEEADB638642D1FDF99',
+    id: 'BAE57063D6A2B3A4',
     participant: undefined
   },
-  messageTimestamp: 1710423117,
-  pushName: 'Juan Vidable',
+  messageTimestamp: 1713540444,
+  pushName: 'Pi Real Estate',
   broadcast: false,
   message: Message {
-    conversation: '1',
-    messageContextInfo: MessageContextInfo {
-      deviceListMetadata: [DeviceListMetadata],
-      deviceListMetadataVersion: 2
+    extendedTextMessage: ExtendedTextMessage {
+      text: 'Contamos con una variedad de proyectos disruptivos y únicos tanto en _Mendoza, Argentina_ como en _Barcelona, España_.\n' +
+        '\n' +
+        'Seleccioná el proyecto por el cual estás interesado:\n' +
+        '\n' +
+        '*1) Anfitrión* - Edificio del vino 🍷 (Mendoza)\n' +
+        '*2) Andro* - Edificio para solteros 🕺 (Mendoza)\n' +
+        '*3) Distintxs* - Edificio LGBT+ 🏳️‍🌈 (Barcelona)\n' +
+        '*4) Otros proyectos*'
     }
   },
-  body: '1',
-  from: '5492615586306'
-}
-[handleMsg]:  {
-  key: {
-    remoteJid: '5492615586306@s.whatsapp.net',
-    fromMe: false,
-    id: 'D3D154A7FC0C3D0E8F2D88282EEFA7FE',
-    participant: undefined
-  },
-  messageTimestamp: 1710423123,
-  pushName: 'Juan Vidable',
-  broadcast: false,
-  message: Message {
-    conversation: 'jj',
-    messageContextInfo: MessageContextInfo {
-      deviceListMetadata: [DeviceListMetadata],
-      deviceListMetadataVersion: 2
-    }
-  },
-  body: 'jj',
-  from: '5492615586306'
-}
-[handleMsg]:  {
-  key: {
-    remoteJid: '5492613042238@s.whatsapp.net',
-    fromMe: false,
-    id: '1C7B3136C9A7E85D3691B6AA518A1B1E',
-    participant: undefined
-  },
-  messageTimestamp: 1710424521,
-  pushName: 'German Arenas',
-  broadcast: false,
-  message: Message {
-    contactMessage: ContactMessage {
-      displayName: 'Paola Callealta',
-      vcard: 'BEGIN:VCARD\n' +
-        'VERSION:3.0\n' +
-        'N:Callealta;Paola;;;\n' +
-        'FN:Paola Callealta\n' +
-        'item1.TEL;waid=5491165390909:+54 9 11 6539-0909\n' +
-        'item1.X-ABLabel:Móvil\n' +
-        'X-WA-BIZ-NAME:Paola Callealta\n' +
-        'END:VCARD',
-      contextInfo: [ContextInfo]
-    },
-    messageContextInfo: MessageContextInfo {
-      deviceListMetadata: [DeviceListMetadata],
-      deviceListMetadataVersion: 2
-    }
-  },
-  body: '',
-  from: '5492613042238'
-}
-[handleMsg]:  {
-  key: {
-    remoteJid: '5491165390909@s.whatsapp.net',
-    fromMe: false,
-    id: '3ADD80F36B1DA10B7E76',
-    participant: undefined
-  },
-  messageTimestamp: 1710424591,
-  pushName: 'Paola',
-  broadcast: false,
-  message: Message {
-    conversation: 'Hola German buen día',
-    messageContextInfo: MessageContextInfo {
-      deviceListMetadata: [DeviceListMetadata],
-      deviceListMetadataVersion: 2
-    }
-  },
-  verifiedBizName: 'Paola',
-  body: 'Hola German buen día',
-  from: '5491165390909'
-}
-[QUEUE_SE_ENVIO]:  {
-  ref: 'ans_888154f3-d1f4-454c-85a2-744b3b819080',
-  keyword: 'key_09887951-5a59-4c52-8f85-16ec3c3a0b54',
-  answer: '¡Hola! Me presento: mi nombre es Pilar, trabajo en el área comercial de _*Pi Real Estate*_. ¿Podrias indicarme tu nombre por favor?',
-  options: {
-    media: null,
-    buttons: [],
-    capture: true,
-    child: null,
-    delay: 0,
-    idle: null,
-    ref: null,
-    nested: [],
-    keyword: {},
-    callback: true
-  },
-  refSerialize: '4829def1bff34e2046c1c1c1f1b7dcde'
-}
-[handleMsg]:  {
-  key: {
-    remoteJid: '5491165390909@s.whatsapp.net',
-    fromMe: false,
-    id: '3A5823E299ACBB486F03',
-    participant: undefined
-  },
-  messageTimestamp: 1710424620,
-  pushName: 'Paola',
-  broadcast: false,
-  message: Message {
-    conversation: 'Jajajajaj',
-    messageContextInfo: MessageContextInfo {
-      deviceListMetadata: [DeviceListMetadata],
-      deviceListMetadataVersion: 2
-    }
-  },
-  verifiedBizName: 'Paola',
-  body: 'Jajajajaj',
-  from: '5491165390909'
-}
-[QUEUE_SE_ENVIO]:  {
-  ref: 'ans_3cc29c78-a3fb-47a4-9bbe-05ec35df4929',
-  keyword: 'ans_888154f3-d1f4-454c-85a2-744b3b819080',
-  answer: 'Contamos con una variedad de proyectos disruptivos y únicos tanto en _Mendoza, Argentina_ como en _Barcelona, España_.\n' +
+  verifiedBizName: 'Pi Real Estate',
+  body: 'Contamos con una variedad de proyectos disruptivos y únicos tanto en _Mendoza, Argentina_ como en _Barcelona, España_.\n' +
     '\n' +
     'Seleccioná el proyecto por el cual estás interesado:\n' +
     '\n' +
@@ -243,17 +135,5 @@
     '*2) Andro* - Edificio para solteros 🕺 (Mendoza)\n' +
     '*3) Distintxs* - Edificio LGBT+ 🏳️‍🌈 (Barcelona)\n' +
     '*4) Otros proyectos*',
-  options: {
-    media: null,
-    buttons: [],
-    capture: true,
-    child: null,
-    delay: 0,
-    idle: null,
-    ref: null,
-    nested: [],
-    keyword: {},
-    callback: true
-  },
-  refSerialize: '395d2dbbfab3816e8c8dab5037904010'
+  from: '5492617064315'
 }
