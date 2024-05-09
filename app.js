@@ -85,7 +85,7 @@ const flowAndro = addKeyword(['andro', '2']).addAnswer(
         '',
         '-Link: https://pireal.com.ar/anfitrionlp/wp-content/uploads/2024/02/Andro-Brochure-2024.pdf',
         '',
-        'Si tenés más dudas escribí la palabra *asesor*.',
+        'Un asesor se pondrá en contacto lo antes posible para brindarte más información y sacarte las dudas. Gracias por comunicarte con *Pi Real Estate*.',
         '',
         'Si querés volver a ver otros proyectos escribí _*Retroceder*_.'
     ],
@@ -213,12 +213,12 @@ const flowInmob = addKeyword("Hola, estoy interesado en sumarme a la red comerci
 
 
     const flowPrincipal = addKeyword(['¡Hola! Quiero más información.', '¡Hola! Vengo de su Landing Page y quiero más información.'])
-    .addAnswer('¡Hola! Me presento: mi nombre es Pilar, trabajo en el área comercial de _*Pi Real Estate*_. ¿Podrias indicarme tu nombre por favor?',
+    .addAnswer('¡Hola! Me presento: mi nombre es Pilar, trabajo en el área comercial de _*Pi Real Estate*_. ¿Podrias indicarme tu nombre y tu correo electronico (opcional) por favor? Escribí ambos datos en un mismo mensaje a continuación. Por ejemplo: Juan juanperez@direccion.com',
     {capture: true},
     async (ctx, {flowDynamic, state}) => {
         await state.update({name: ctx.body})
     
-        await flowDynamic(`¡Gracias por tu nombre!`)
+        await flowDynamic(`¡Gracias por tus datos!`)
     }
     )
     .addAnswer(
