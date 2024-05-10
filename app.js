@@ -20,18 +20,6 @@ const flowAsesorWpp = addKeyword(['2']).addAnswer(
     ]
 )
 
-const flowAsesor = addKeyword(['asesor']).addAnswer(
-    [
-        '¿Como prefiere que lo contactemos? (Escriba un número)',
-        ' ',
-        '*1*) Llamada telefónica',
-        '*2*) WhatsApp',
-    ],
-    null,
-    null,
-    [flowAsesorLlamada, flowAsesorWpp]
-    
-)
 
 const flowDespedida = addKeyword('gracias').addAnswer(
     [
@@ -91,7 +79,7 @@ const flowAndro = addKeyword(['andro', '2']).addAnswer(
     ],
     null,
     null,
-    [flowPrincipalCopia]
+    [flowPrincipalCopia, flowDespedida]
 )
 
 const flowDistintxs = addKeyword(['3', 'distintxs'])
@@ -108,7 +96,7 @@ const flowDistintxs = addKeyword(['3', 'distintxs'])
     ],
     null,
     null,
-    [flowPrincipalCopia]
+    [flowPrincipalCopia, flowDespedida]
 )
 
 const flowAnfitrion = addKeyword(['anfitrion', 'anfitrión', 'anf', 'anfitron', '1', '1)']).addAnswer(
@@ -156,7 +144,7 @@ const flowVeganians = addKeyword(['1', 'veganians'])
     ],
     null,
     null,
-    [flowPrincipalCopia]
+    [flowPrincipalCopia, flowDespedida]
 )
 
 const flowTorreFuerte = addKeyword(['2', 'Torrefuerte', 'torre fuerte'])
@@ -170,7 +158,7 @@ const flowTorreFuerte = addKeyword(['2', 'Torrefuerte', 'torre fuerte'])
     ],
     null,
     null,
-    [flowPrincipalCopia]
+    [flowPrincipalCopia, flowDespedida]
 )
 
 
@@ -213,7 +201,9 @@ const flowInmob = addKeyword("Hola, estoy interesado en sumarme a la red comerci
 
 
     const flowPrincipal = addKeyword(['¡Hola! Quiero más información.', '¡Hola! Vengo de su Landing Page y quiero más información.'])
-    .addAnswer('¡Hola! Me presento: mi nombre es Pilar, trabajo en el área comercial de _*Pi Real Estate*_. ¿Podrias indicarme tu nombre y tu correo electronico (opcional) por favor? Escribí ambos datos en un mismo mensaje a continuación. Por ejemplo: Juan juanperez@direccion.com',
+    .addAnswer('¡Hola! Me presento: mi nombre es Pilar, soy la asistente virtual de _*Pi Real Estate*_.',
+        '',
+        '¿Podrías indicarme tu *nombre* y tu *correo electronico* (opcional) por favor? Escribí ambos datos en un mismo mensaje a continuación. Por ejemplo: Juan juanperez@direccion.com',
     {capture: true},
     async (ctx, {flowDynamic, state}) => {
         await state.update({name: ctx.body})
