@@ -201,9 +201,10 @@ const flowInmob = addKeyword("Hola, estoy interesado en sumarme a la red comerci
 
 
     const flowPrincipal = addKeyword(['¡Hola! Quiero más información.', '¡Hola! Vengo de su Landing Page y quiero más información.'])
-    .addAnswer('¡Hola! Me presento: mi nombre es Pilar, soy la asistente virtual de _*Pi Real Estate*_.',
+    .addAnswer(['¡Hola! Me presento: mi nombre es Pilar, soy la asistente virtual de _*Pi Real Estate*_.',
         '',
         '¿Podrías indicarme tu *nombre* y tu *correo electronico* (opcional) por favor? Escribí ambos datos en un mismo mensaje a continuación. Por ejemplo: Juan juanperez@direccion.com',
+],
     {capture: true},
     async (ctx, {flowDynamic, state}) => {
         await state.update({name: ctx.body})
