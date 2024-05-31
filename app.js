@@ -189,7 +189,7 @@ const flowOtros = addKeyword('Quiero ver otros proyectos')
                 return gotoFlow(flowPrincipalCopia)
             }
             else{
-                return fallBack('Respuesta Inválida')
+                return fallBack('Respuesta Inválida, intente nuevamente ingresando un solo número, por ejemplo 1.')
             }
         }
 )
@@ -216,7 +216,7 @@ const flowInmob = addKeyword("Hola, estoy interesado en sumarme a la red comerci
         [
             'Contamos con una variedad de proyectos disruptivos y únicos tanto en _Mendoza, Argentina_ como en _Barcelona, España_.',
             '',
-            'Seleccioná el proyecto por el cual estás interesado:',
+            'Seleccioná el proyecto indicando con su respectivo número por el cual estás interesado:',
             '',
             '*1) Anfitrión* - Edificio del vino 🍷 (Mendoza)',
             '*2) Andro* - Edificio para solteros 🕺 (Mendoza)',
@@ -229,7 +229,7 @@ const flowInmob = addKeyword("Hola, estoy interesado en sumarme a la red comerci
         async (ctx, {gotoFlow, fallBack}) => {
             
             if(ctx.body>4 || ctx.body <1){
-                return fallBack('Respuesta Inválida')
+                return fallBack('Respuesta Inválida. Las opciones deben ser menores a 4 y mayores a 1')
             }
             if(ctx.body==1){
                 return gotoFlow(flowAnfitrion)
@@ -243,7 +243,7 @@ const flowInmob = addKeyword("Hola, estoy interesado en sumarme a la red comerci
             else if(ctx.body==4){
                 return gotoFlow(flowOtros)
             }else{
-                return fallBack('Respuesta Inválida')
+                return fallBack('Respuesta Inválida, intente nuevamente ingresando un solo número, por ejemplo 1.')
             }
         }
 
