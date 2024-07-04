@@ -32,22 +32,18 @@ const flowDespedida = addKeyword('gracias').addAnswer(
 const flowPrincipalCopia = addKeyword("Retroceder")
 .addAnswer(
     [
-        'Contamos con una variedad de proyectos disruptivos y únicos tanto en _Mendoza, Argentina_ como en _Barcelona, España_.',
+        '¿Que buscas con tu inversión?',
         '',
-        'Seleccioná el proyecto por el cual estás interesado:',
-        '',
-        '*1) Anfitrión* - Edificio del vino 🍷 (Mendoza)',
-        '*2) Andro* - Edificio para solteros 🕺 (Mendoza)',
-        '*3) Distintxs* - Edificio LGBT+ 🏳️‍🌈 (Barcelona)',
-        '*4) Otros proyectos*',            
+        '1) Inversión 💰',
+        '2) Vivienda 🏠'           
         
         
     ],
     {capture:true},
     async (ctx, {gotoFlow, fallBack}) => {
         
-        if(ctx.body>4 || ctx.body <1){
-            return fallBack('Respuesta Inválida')
+        if(ctx.body>2 || ctx.body <1){
+            return fallBack('Respuesta Inválida. Las opciones deben ser menores a 4 y mayores a 1')
         }
         if(ctx.body==1){
             return gotoFlow(flowAnfitrion)
@@ -55,13 +51,8 @@ const flowPrincipalCopia = addKeyword("Retroceder")
         else if(ctx.body==2){
             return gotoFlow(flowAndro)
         }
-        else if(ctx.body==3){
-            return gotoFlow(flowDistintxs)
-        }
-        else if(ctx.body==4){
-            return gotoFlow(flowOtros)
-        }else{
-            return fallBack('Respuesta Inválida')
+        else{
+            return fallBack('Respuesta Inválida, intente nuevamente ingresando un solo número, por ejemplo 1.')
         }
     }
 

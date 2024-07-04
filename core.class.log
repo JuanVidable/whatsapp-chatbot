@@ -1,0 +1,156 @@
+[handleMsg]:  {
+  key: {
+    remoteJid: '5492615586306@s.whatsapp.net',
+    fromMe: false,
+    id: '22122FC4719FF7D914206031E927EFDA',
+    participant: undefined
+  },
+  messageTimestamp: 1720108773,
+  pushName: 'Juan Vidable',
+  broadcast: false,
+  message: Message {
+    conversation: '¡Hola! Quiero más información.',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: '¡Hola! Quiero más información.',
+  from: '5492615586306'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_718bdd01-5c2a-4acf-864a-1f27e43a220c',
+  keyword: 'key_4917ed37-3ef6-461a-ae38-fad1928c40ed',
+  answer: '¡Hola! Me presento: mi nombre es Pilar, soy la asistente de _*Pi Real Estate*_.\n' +
+    '\n' +
+    'Para empezar, ¿Podrías indicarme tu *nombre* por favor? ',
+  options: {
+    media: null,
+    buttons: [],
+    capture: true,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: true
+  },
+  refSerialize: 'e16e85dc74a485289550f6dbfa268642'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '5492615586306@s.whatsapp.net',
+    fromMe: false,
+    id: 'DC73CD20589ACA36D133D2537D81878F',
+    participant: undefined
+  },
+  messageTimestamp: 1720108775,
+  pushName: 'Juan Vidable',
+  broadcast: false,
+  message: Message {
+    conversation: 'j',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: 'j',
+  from: '5492615586306'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_c19fcef7-4c9f-4eb3-8794-c85e83661aba',
+  keyword: 'ans_718bdd01-5c2a-4acf-864a-1f27e43a220c',
+  answer: '¿Que buscas con tu inversión?\n\n1) Inversión 💰\n2) Vivienda 🏠',
+  options: {
+    media: null,
+    buttons: [],
+    capture: true,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: true
+  },
+  refSerialize: '01757b5238d441ea01c1511fa7f989b5'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '5492615586306@s.whatsapp.net',
+    fromMe: false,
+    id: '8EFC7FC4C69136247611FD71C9181843',
+    participant: undefined
+  },
+  messageTimestamp: 1720108778,
+  pushName: 'Juan Vidable',
+  broadcast: false,
+  message: Message {
+    conversation: '1',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: '1',
+  from: '5492615586306'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '5492615586306@s.whatsapp.net',
+    fromMe: false,
+    id: '6AEDE3F44AABA415C01F97339888B7EC',
+    participant: undefined
+  },
+  messageTimestamp: 1720108783,
+  pushName: 'Juan Vidable',
+  broadcast: false,
+  message: Message {
+    conversation: 'retroceder',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: 'retroceder',
+  from: '5492615586306'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_5610d53a-7ebd-4f5e-9206-12d2f557a79a',
+  keyword: 'key_82a2872a-9ac5-4507-8c47-7ffb1a6e8e15',
+  answer: '¿Que buscas con tu inversión?\n\n1) Inversión 💰\n2) Vivienda 🏠',
+  options: {
+    media: null,
+    buttons: [],
+    capture: true,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: true
+  },
+  refSerialize: '1ebfae1c3f12b9c2ca50aba338affbe0'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '5492615586306@s.whatsapp.net',
+    fromMe: false,
+    id: '3343F0C2EF5A3FB408ED086F2956C7DD',
+    participant: undefined
+  },
+  messageTimestamp: 1720108790,
+  pushName: 'Juan Vidable',
+  broadcast: false,
+  message: Message {
+    conversation: '2',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: '2',
+  from: '5492615586306'
+}
