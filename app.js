@@ -67,7 +67,9 @@ const flowPrincipalCopia = addKeyword("Retroceder")
 
 )
 
-const flowAndro = addKeyword(['andro', '2']).addAnswer(
+const flowAndro = addKeyword(['andro', '2'])
+    .addAnswer('¡Excelente elección! Paso a contarte un poco más sobre esta oportunidad de vivienda')
+    .addAnswer(
     [
         'Te mandamos nuestro brochure para que tengas más información acerca de este innovador proyecto para solterxs en Mendoza, Argentina llamado _*Andro*_.',
         '',
@@ -99,7 +101,9 @@ const flowDistintxs = addKeyword(['3', 'distintxs'])
     [flowPrincipalCopia, flowDespedida]
 )
 
-const flowAnfitrion = addKeyword(['anfitrion', 'anfitrión', 'anf', 'anfitron', '1', '1)']).addAnswer(
+const flowAnfitrion = addKeyword(['anfitrion', 'anfitrión', 'anf', 'anfitron', '1', '1)'])
+    .addAnswer('¡Excelente elección! Paso a contarte un poco más acerca de esta increíble oportunidad de inversión')
+    .addAnswer(
     [
         'El _*Edificio Anfitrión*_ es un proyecto inmobiliario *único* y *exclusivo* para alquiler temporario, ubicado en Mendoza - Argentina, Capital Internacional del Vino 🍷. Se encuentra en el corazón de la Quinta Sección, a metros del Parque Gral San Martín.',
     ],
@@ -200,11 +204,11 @@ const flowInmob = addKeyword("Hola, estoy interesado en sumarme a la red comerci
 
 
 
-    const flowPrincipal = addKeyword(['¡Hola! Quiero más información.', '¡Hola! Vengo de su Landing Page y quiero más información.'])
-    .addAnswer(['¡Hola! Me presento: mi nombre es Pilar, soy la asistente virtual de _*Pi Real Estate*_.',
+const flowPrincipal = addKeyword(['¡Hola! Quiero más información.', '¡Hola! Vengo de su Landing Page y quiero más información.', '¡Hola! Vengo de su página web y quiero más información.'])
+    .addAnswer(['¡Hola! Me presento: mi nombre es Pilar, soy la asistente de _*Pi Real Estate*_.',
         '',
-        '¿Podrías indicarme tu *nombre* y tu *correo electronico* (opcional) por favor? Escribí ambos datos en un mismo mensaje a continuación. Por ejemplo: Juan juanperez@direccion.com',
-],
+        'Para empezar, ¿Podrías indicarme tu *nombre* por favor? ',
+    ],
     {capture: true},
     async (ctx, {flowDynamic, state}) => {
         await state.update({name: ctx.body})
@@ -214,21 +218,17 @@ const flowInmob = addKeyword("Hola, estoy interesado en sumarme a la red comerci
     )
     .addAnswer(
         [
-            'Contamos con una variedad de proyectos disruptivos y únicos tanto en _Mendoza, Argentina_ como en _Barcelona, España_.',
+            '¿Que buscas con tu inversión?',
             '',
-            'Seleccioná el proyecto indicando con su respectivo número por el cual estás interesado:',
-            '',
-            '*1) Anfitrión* - Edificio del vino 🍷 (Mendoza)',
-            '*2) Andro* - Edificio para solteros 🕺 (Mendoza)',
-            '*3) Distintxs* - Edificio LGBT+ 🏳️‍🌈 (Barcelona)',
-            '*4) Otros proyectos*',            
+            '1) Inversión 💰',
+            '2) Vivienda 🏠'           
             
             
         ],
         {capture:true},
         async (ctx, {gotoFlow, fallBack}) => {
             
-            if(ctx.body>4 || ctx.body <1){
+            if(ctx.body>2 || ctx.body <1){
                 return fallBack('Respuesta Inválida. Las opciones deben ser menores a 4 y mayores a 1')
             }
             if(ctx.body==1){
@@ -237,12 +237,7 @@ const flowInmob = addKeyword("Hola, estoy interesado en sumarme a la red comerci
             else if(ctx.body==2){
                 return gotoFlow(flowAndro)
             }
-            else if(ctx.body==3){
-                return gotoFlow(flowDistintxs)
-            }
-            else if(ctx.body==4){
-                return gotoFlow(flowOtros)
-            }else{
+            else{
                 return fallBack('Respuesta Inválida, intente nuevamente ingresando un solo número, por ejemplo 1.')
             }
         }
